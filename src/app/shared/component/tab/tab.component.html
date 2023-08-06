@@ -1,0 +1,52 @@
+<h1 class="bg-info text-center text-white text-uppercase p-2 mb-5">tab component</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-1 ">
+            <ul class="nav nav-pills mb-2">
+                <li class=" nav-item">
+                    <a href="javascript:;" class="nav-link active text-uppercase"
+                    (click)="onClick($event)" data-id="angular"
+                    [ngClass]="{
+                        'active' : skill === 'angular'
+                    }">angular</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link text-uppercase"
+                    (click)="onClick($event)" data-id="typescript"
+                    [ngClass]="{
+                        'active' : skill === 'typescript'
+                    }">typescript</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;" class="nav-link text-uppercase"
+                    (click)="onClick($event)" data-id="javascript"
+                    [ngClass]="{
+                        'active' : skill === 'javascript'
+                    }">javascript</a>
+                </li>
+            </ul>
+            <div class="card" >
+                <div class="card-body" *ngIf="skill === 'angular'" >
+                    <p>
+                        Angular is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+                    </p>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-body" *ngIf="skill === 'javascript'">
+                    <p>
+                        JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body" *ngIf="skill === 'typescript'">
+                    <p>
+                        TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. It is designed for the development of large applications and transpiles to JavaScript. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
